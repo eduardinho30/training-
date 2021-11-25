@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: url(backgroundProyect3.png);
+    
+    /* height: minheight(800px); */
+}
+
+/* DISPLAY GRID */
+#grid {
+    /* background: url(backgroundProyect.jpg); */
+    display: grid;
+    height: 700px;
+    grid-template-areas:    'upHead upHead'
+                            'section section'
+                            'final final';
+    grid-template-columns: 50%  50%;
+    grid-template-rows: 120px auto 70px;
+}
+
+/* ================================================= */
+
+/* CABEZA ENTRADA */
+.upHead {
+    /* ORGANIZACION GRID */
+    grid-area: upHead;
+    display:grid;
+    grid-template-areas: 'head nav';
+    /* TAMAÑOS */
+    /* height: 80px; */
+
+    /* BLUR EFFECT */
+    backdrop-filter: blur(10px);
+    background-color: rgb(255, 255, 255, 0.05);
+    letter-spacing: 1.5px;
+    box-shadow: 0px 0px 17px 0px;
+}
+.inHead{
+    /* TAMAÑOS */
+    height: auto;
+    padding-top: 1.5em;
+    padding-left: 3em;
+    
+    /* BLUR EFFECT */
+    grid-area: head;
+    /* box-shadow: 0px 10px 0px 0px; */
+}
+.generalTitle {
+    font-size: 50px;
+}
+
+/* BARRA DE NAVEGACION ENTRADA */
+.navBar{
+    /* arreglar altura botones barra de naveagion, aplicar borde para ver el error */
+    height: auto;
+    /* =========================================== */
+    /* TAMAÑOS */
+    width: auto;
+    /* ORGANIZACION GRID */
+    grid-area: nav;
+    display: grid;
+    grid-template-areas:'home aboutUs contactUs info';
+    grid-template-columns: repeat(4,auto);
+    padding-top: 2.5em;
+    text-align: center;
+    margin-left: 0;
+}
+
+
+/* CONTENIDO PAGINA */
+.sectionInfo {
+    /* TAMAÑOS */
+    grid-area: section;
+    height: auto;
+    margin: 0 3em 0 3em;
+    /* ORGANIZACION GRID */
+    display: grid;
+    grid-template-areas: 'section img';
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 300px;
+}
+.articleMid {
+    padding-top: 7em;
+}
+.img {
+    margin-top: 3em;
+}
+.contentTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 60px;
+    letter-spacing: -.035em;
+    padding-bottom: 0.5em;
+}
+.paragraphs {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    justify-content: safe;
+}
+
+/* INFORMACION FINAL PAGINA */
+.finalInfo{
+    grid-area: final;
+    /* border: 1px solid black; */
+    text-align: center;
+    margin: 0 3em 0 3em; 
+    text-align: center;
+    height: auto;
+}
+
+/* #FFE5C3 */
